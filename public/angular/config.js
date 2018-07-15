@@ -5,9 +5,9 @@ angular.module('myApp')
 		templateUrl: 'views/login.html',
 		controller: 'loginCtrl'
 	})
-	.when('/projeto', {
-		templateUrl: 'views/projeto.html',
-		controller: 'projetoCTRL'
+	.when('/nova_venda', {
+		templateUrl: 'views/nova_venda.html',
+		controller: 'vendasCtrl'
 	})
 	.when('/listarProjetos', {
 		templateUrl: 'views/listarProjetos.html',

@@ -113,8 +113,14 @@ height: 35px;
 line-height: 35px;
 text-indent: 25px;
 text-shadow: 0 1px 0 #fff;
-background: url(../images/icn_user.png) no-repeat center left;
 margin-left: 6%;
+}
+
+.user i{
+	float: left;
+	width: 0px;
+	margin-left: 5px;
+	margin-top: 7px;
 }
 
 .user a {
@@ -124,15 +130,22 @@ color: #666666}
 .user a:hover {
 color: #77BACE;
 }
+.user .nome_user{
+	margin-left: 3px;
+    margin-top: 5px;
+}
 
-.user a.logout_user {
-float: left;
-display: block;
-width: 16px;
-height: 35px;
-cursor: pointer;
-text-indent: -5000px;
-background: url(../images/icn_logout.png) center no-repeat;
+.user .logout_user {
+	margin-top: 5px;
+	margin-left: -10px;
+	width: 16px;
+	height: 35px;
+	cursor: pointer;
+}
+
+.toggle li i{
+	width: 0px;
+	color:#666666;
 }
 
 /* Breadcrumbs */

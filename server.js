@@ -65,14 +65,14 @@ app.post('/login', function (req, res) {
 		});
 });
 
-// app.get('/sessaoConsultar', function (req, res) {
-// 	res.send(req.session.user);
-// });
+app.get('/sessaoConsultar', function (req, res) {
+	res.send(req.session.user);
+});
 
-// app.get('/logout', function (req, res) {
-// 	req.session.user = null;
-// 	res.send(req.session.user);
-// });
+app.get('/logout', function (req, res) {
+	req.session.user = null;
+	res.send(req.session.user);
+});
 
 // app.get('/estoque/listar', function (req, res) {
 // 	var selectEstoque = 'SELECT * FROM estoque';

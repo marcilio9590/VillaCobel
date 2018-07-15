@@ -12,8 +12,9 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/menu.css" rel="stylesheet">
-	<link href="css/icons/css/font-awesome.min.css" rel="stylesheet">
-	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+	 crossorigin="anonymous">
+
 	<link rel="stylesheet" href="dashboard/css/layout.css" type="text/css" media="screen" />
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
@@ -62,13 +63,19 @@
 		</hgroup>
 	</header>
 	<!-- end of header bar -->
-	<br><br><br>
+	<br>
+	<br>
+	<br>
 	<section id="secondary_bar">
 		<div class="user">
-			<p ng-show="logado">{{user.login}}</p>
-			<a ng-show="logado" class="logout_user" ng-click="logout()" title="Logout">Logout</a>
+			<i ng-show="logado" class="fas fa-user-circle fa-2x"></i>
+			<p ng-show="logado" class="nome_user">{{user.login}}</p>
+			<i ng-show="logado" title="Logout" class="fas fa-sign-out-alt fa-2x logout_user" ng-click="logout()"></i>
+			<!-- </a> -->
+
 		</div>
 		<div class="breadcrumbs_container">
+
 
 		</div>
 	</section>
@@ -79,20 +86,32 @@
 
 	<aside ng-show="logado" id="sidebar" class="column">
 		<form class="quick_search">
-			<input type="text" placeholder="Código do Projeto">
+			<input type="text" placeholder="Número da Venda">
 		</form>
 		<hr/>
-		<h3>Projetos</h3>
+		<h3>Vendas</h3>
 		<ul class="toggle">
-			<li class="icn_new_article"><a href="/projeto">Novo Projeto</a></li>
-			<li class="icn_categories"><a href="/listarProjetos">Listar Projetos</a></li>
+			<li class="">
+				<i class="fas fa-dollar-sign"></i>
+				<a href="/nova_venda">Nova Venda</a>
+			</li>
+			<li class="">
+				<i class="fas fa-chart-bar"></i>
+				<a href="/listarProjetos">Balanço de Vendas</a>
+			</li>
 		</ul>
 		<h3>Estoque</h3>
 		<ul class="toggle">
-			<li class="icn_folder"><a href="/materiais">Novo Item</a></li>
-			<li class="icn_photo"><a href="/listarMateriais">Listar Itens</a></li>
+			<li class="">
+				<i class="fas fa-box-open"></i>
+				<a href="/materiais">Novo Produto</a>
+			</li>
+			<li class="">
+				<i class="fas fa-dolly"></i>
+				<a href="/listarMateriais">Ajuste de Estoque</a>
+			</li>
 		</ul>
-		<h3>Orçamento</h3>
+		<!-- <h3>Orçamento</h3>
 		<ul class="toggle">
 			<li class="icn_settings"><a href="#">Simular</a></li>
 		</ul>
@@ -106,7 +125,7 @@
 		<ul class="toggle">
 			<li class="icn_add_user"><a href="#">Novo Usuário</a></li>
 			<li class="icn_view_users"><a href="#">Listar Usuários</a></li>
-		</ul>
+		</ul> -->
 
 
 		<footer>
@@ -127,15 +146,15 @@
 
 	<script src="../angular/aplicacao.js"></script>
 	<script src="../angular/config.js"></script>
-	<script src="../angular/controllers/projetoCTRL.js"></script>
+	<script src="../angular/controllers/vendasCtrl.js"></script>
 	<script src="../angular/controllers/produtoCtrl.js"></script>
 	<script src="../angular/controllers/indexCtrl.js"></script>
 
+	<script src="../angular/services/vendasService.js"></script>
 	<script src="../angular/services/produtoService.js"></script>
-	<script src="../angular/services/projetoService.js"></script>
 	<script src="../angular/services/loginService.js"></script>
 
-	<script src="../angular/factory/produtoFactory.js"></script>
+	<script src="../angular/factory/vendasFactory.js"></script>
 	<script src="../angular/factory/projetoFactory.js"></script>
 
 	<script src="../angular/directives/confirm.directive.js"></script>

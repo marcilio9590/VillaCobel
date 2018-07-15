@@ -1,5 +1,5 @@
 // Factory
-myApp.factory('projetoFactory', function () {
+myApp.factory('vendasFactory', function () {
 
 	var itemProjetoBack = function (idItem, tipo, metroAtual) {
 		this.idItem = idItem;

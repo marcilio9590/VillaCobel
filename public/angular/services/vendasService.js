@@ -1,4 +1,4 @@
-myApp.service('projetoService', function ($http) {
+myApp.service('vendasService', function ($http) {
 
     function apagarItemProjeto(id) {
        return $http({
