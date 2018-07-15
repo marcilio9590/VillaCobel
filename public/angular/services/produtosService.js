@@ -1,4 +1,4 @@
-myApp.service('produtoService', function ($http) {
+myApp.service('produtosService', function ($http) {
 
     function searchProducts(codProj) {
         return $http({

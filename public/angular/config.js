@@ -13,13 +13,13 @@ angular.module('myApp')
 		templateUrl: 'views/balanco_vendas.html',
 		controller: 'vendasCtrl'
 	})
-	.when('/materiais', {
-		templateUrl: 'views/produto.html',
-		controller: 'produtoCtrl'
+	.when('/novo_produto', {
+		templateUrl: 'views/novo_produto.html',
+		controller: 'produtosCtrl'
 	})
-	.when('/listarMateriais', {
-		templateUrl: 'views/listarMateriais.html',
-		controller: 'produtoCtrl'
+	.when('/ajuste_estoque', {
+		templateUrl: 'views/ajuste_estoque.html',
+		controller: 'produtosCtrl'
 	})
 	.otherwise({
 		redirectTo: '/'
