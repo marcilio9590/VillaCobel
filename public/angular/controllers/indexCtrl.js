@@ -20,8 +20,8 @@ myApp.controller("indexCTRL", function ($scope, $http, loginService, $location, 
 
 	function consultaSessao() {
 		loginService.consultarSessao().then(function (response) {
-			var user = response.data;
-			if (user) {
+			vm.user = response.data;
+			if (vm.user) {
 				vm.logado = true;
 			} else {
 				vm.logado = false;

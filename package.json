@@ -4,12 +4,19 @@
   "description": "Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)\r  ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))",
   "main": "server.js",
   "dependencies": {
-    "angular-material": "^1.1.1",
+    "angular": "^1.4.14",
+    "angular-animate": "^1.7.2",
+    "angular-aria": "^1.7.2",
+    "angular-material": "^1.1.10",
+    "angular-messages": "^1.7.2",
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "express-myconnection": "^1.0.4",
     "express-session": "^1.15.2",
-    "mysql": "^2.12.0"
+    "md5": "^2.2.1",
+    "mysql": "^2.12.0",
+    "mysql-insert-multiple": "^1.0.4",
+    "pg": "^7.4.3"
   },
   "devDependencies": {},
   "scripts": {
