@@ -10,6 +10,7 @@
     "angular-material": "^1.1.10",
     "angular-messages": "^1.7.2",
     "body-parser": "^1.15.1",
+    "ejs": "^2.6.1",
     "express": "^4.13.4",
     "express-myconnection": "^1.0.4",
     "express-session": "^1.15.2",

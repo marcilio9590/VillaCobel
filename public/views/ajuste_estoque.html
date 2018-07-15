@@ -10,8 +10,25 @@
 	</div>
 	<br>
 	<div class="row">
-		<div class="col-md-4"></div>
-		<div class="col-md-4"></div>
-		<div class="col-md-4"></div>
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<table class="table table-hover table-bordered" id="tblEstoque">
+				<thead>
+					<th>Nome</th>
+					<th>Quantidade</th>
+					<th>Ajuste</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in filteredTodos">
+						<td ng-bind="item.nome"></td>
+						<td ng-bind="item.quantidade"></td>
+						<td>
+							<i class="fas fa-undo"></i>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-2"></div>
 	</div>
 </section>

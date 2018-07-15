@@ -7,7 +7,8 @@ angular.module('myApp')
 	})
 	.when('/nova_venda', {
 		templateUrl: 'views/nova_venda.html',
-		controller: 'vendasCtrl'
+		controller: 'vendasCtrl',
+		reloadOnSearch: false
 	})
 	.when('/balanco_vendas', {
 		templateUrl: 'views/balanco_vendas.html',
