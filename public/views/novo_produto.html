@@ -1,4 +1,4 @@
-<section class="container-fluid" id="cadProjeto">
+<section class="container-fluid" id="cadProduto">
 	<div>
 		<div class="row">
 			<div class="col-md-3">
@@ -8,4 +8,43 @@
 			</div>
 			<div class="col-md-3"></div>
 		</div>
+		<br>
+		<form>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="txtNome">Nome</label>
+						<input type="email" ng-model="produto.nome" class="form-control" id="txtNome" aria-describedby="nomeHelp" placeholder="Nome do Produto">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="numQuantidade">Quantidade</label>
+						<input type="number" ng-model="produto.quantidade" class="form-control" id="numQuantidade" placeholder="Quantidade">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="precoCusto">Preço de custo</label>
+						<input type="number" ng-model="produto.custo" step="0.01" class="form-control" id="precoCusto" placeholder="Quantidade">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="precoCliente">Preço para o cliente</label>
+						<input type="number" ng-model="produto.precoCliente" step="0.01" class="form-control" id="precoCliente" placeholder="Quantidade">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-9">
+				</div>
+				<div class="col-md-3">
+					<div class="pull-right">
+						<button ng-click="limpar" class="btn btn-default">Limpar</button>
+						<button ng-click="salvar" class="btn btn-default">Salvar</button>
+					</div>
+				</div>
+			</div>
+		</form>
 </section>
