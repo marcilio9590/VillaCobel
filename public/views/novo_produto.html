@@ -14,7 +14,7 @@
 				<div class="col-md-3">
 					<div class="form-group">
 						<label for="txtNome">Nome</label>
-						<input type="email" ng-model="produto.nome" class="form-control" id="txtNome" aria-describedby="nomeHelp" placeholder="Nome do Produto">
+						<input type="text" ng-model="produto.nome" class="form-control" id="txtNome" aria-describedby="nomeHelp" placeholder="Nome do produto">
 					</div>
 				</div>
 				<div class="col-md-3">
@@ -26,13 +26,13 @@
 				<div class="col-md-3">
 					<div class="form-group">
 						<label for="precoCusto">Preço de custo</label>
-						<input type="number" ng-model="produto.custo" step="0.01" class="form-control" id="precoCusto" placeholder="Quantidade">
+						<input type="number" ng-model="produto.custo" step="0.01" class="form-control" id="precoCusto" placeholder="Preço de custo">
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="form-group">
 						<label for="precoCliente">Preço para o cliente</label>
-						<input type="number" ng-model="produto.precoCliente" step="0.01" class="form-control" id="precoCliente" placeholder="Quantidade">
+						<input type="number" ng-model="produto.precoCliente" step="0.01" class="form-control" id="precoCliente" placeholder="Preço de venda ao cliente">
 					</div>
 				</div>
 			</div>
@@ -41,8 +41,8 @@
 				</div>
 				<div class="col-md-3">
 					<div class="pull-right">
-						<button ng-click="limpar" class="btn btn-default">Limpar</button>
-						<button ng-click="salvar" class="btn btn-default">Salvar</button>
+						<button ng-click="limpar()" class="btn btn-default">Limpar</button>
+						<button ng-click="salvar()" class="btn btn-default">Salvar</button>
 					</div>
 				</div>
 			</div>

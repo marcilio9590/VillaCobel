@@ -2,6 +2,14 @@ myApp.controller("produtosCtrl", function ($scope, $http, produtosFactory, produ
 	var vm = $scope;
 	vm.produto = {};
 
+	vm.limpar = function () {
+		vm.produto = {};
+	}
+
+	vm.salvar = function () {
+
+	}
+
 	function activate() {
 	}
 	activate();
