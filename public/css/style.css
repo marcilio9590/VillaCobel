@@ -150,3 +150,20 @@ hr{
 	padding-left: 5px;
 	padding-bottom: 6px;
 }
+
+.table, .table th{
+	text-align: center;
+}
+.clickable{
+	cursor: pointer;
+}
+.clickable:hover{
+	color: #77BACE;
+}
+.pagination{
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}

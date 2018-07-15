@@ -14,20 +14,27 @@
 		<div class="col-md-8">
 			<table class="table table-hover table-bordered" id="tblEstoque">
 				<thead>
-					<th>Nome</th>
-					<th>Quantidade</th>
-					<th>Ajuste</th>
+					<tr>
+						<th>Nome</th>
+						<th>Quantidade</th>
+						<th>Ajuste</th>
+					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="item in filteredTodos">
+					<!-- <tr ng-repeat="item in itemsEstoque"> -->
+					<tr dir-paginate="item in itemsEstoque | itemsPerPage: 5">
 						<td ng-bind="item.nome"></td>
 						<td ng-bind="item.quantidade"></td>
 						<td>
-							<i class="fas fa-undo"></i>
+							<i class="fas fa-undo clickable"></i>
 						</td>
 					</tr>
 				</tbody>
 			</table>
+			<div class="pagination">
+				<dir-pagination-controls max-size="5" direction-links="true" boundary-links="true">
+				</dir-pagination-controls>
+			</div>
 		</div>
 		<div class="col-md-2"></div>
 	</div>
