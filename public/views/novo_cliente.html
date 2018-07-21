@@ -26,16 +26,22 @@
                 <div class="col-md-3 form-inline">
                     <div class="form-group">
                         <label for="txtTelefones">Telefones</label>
-                        <input type="text" maxlength="14" ng-model="cliente.telefonePrincipal" class="form-control" placeholder="(XX) XXXXX-XXXXX" id="txtTelefones" ui-br-phone-number-mask="areaCode">
-
-                        <div ng-show="cliente.telefones.length > 1">
-                            <input ng-repeat="tel in cliente.telefones" type="text" maxlength="14" ng-model="cliente.telefones[$index]" class="form-control"
-                                id="txtTelefones{{$index}}" ui-br-phone-number-mask="areaCode">
-                        </div>
-
+                        <input type="text" maxlength="14" ng-model="cliente.telefonePrincipal" class="form-control" placeholder="(XX) XXXXX-XXXXX"
+                            id="txtTelefones" ui-br-phone-number-mask="areaCode">
                         <div ng-click="adicionarTelefone()" class="addTelefone">
                             <i class="far fa-plus-square fa-2x"></i>
                         </div>
+
+                        <div ng-show="cliente.telefones.length > 0">
+                            <div ng-repeat="tel in cliente.telefones">
+                                <input style="margin-top: 3px" type="text" maxlength="14" placeholder="(XX) XXXXX-XXXXX" ng-model="tel.valor"
+                                    class="form-control" id="tel.id" ui-br-phone-number-mask="areaCode">
+                                <div ng-click="removerTelefone($index)" class="addTelefone">
+                                    <i class="far fa-minus-square fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
