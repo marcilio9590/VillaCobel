@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Sis Fábrica Sofá</title>
+	<title>VillaCobel</title>
 
 	<meta name="description" content="Source code generated using layoutit.com">
 	<meta name="author" content="LayoutIt!">
@@ -111,6 +111,18 @@
 				<a href="/ajuste_estoque">Ajuste de Estoque</a>
 			</li>
 		</ul>
+
+		<h3>Clientes</h3>
+		<ul class="toggle">
+			<li class="">
+				<i class="fas fa-user"></i>
+				<a href="/cadastro_cliente">Cadastro Cliente</a>
+			</li>
+			<li class="">
+				<i class="fas fa-users"></i>
+				<a href="/ajuste_clientes">Ajuste de Clientes</a>
+			</li>
+		</ul>
 		<!-- <h3>Orçamento</h3>
 		<ul class="toggle">
 			<li class="icn_settings"><a href="#">Simular</a></li>
@@ -142,20 +154,27 @@
 	<script src="../angular/angular.min.js"></script>
 	<script src="../angular/rotas.js"></script>
 	<script src="../angular/paginacao/dirPagination.js"></script>
-	<script src="bower_components/angular-input-masks/angular-input-masks-standalone.min.js"></script>
+	<script src="node_modules/angular-input-masks/releases/angular-input-masks-standalone.min.js"></script>
 
 	<script src="../angular/aplicacao.js"></script>
 	<script src="../angular/config.js"></script>
 	<script src="../angular/controllers/vendasCtrl.js"></script>
 	<script src="../angular/controllers/produtosCtrl.js"></script>
 	<script src="../angular/controllers/indexCtrl.js"></script>
+	<script src="../angular/controllers/clienteCtrl.js"></script>
 
+	
+	<script src="../angular/services/abstractService.js"></script>
 	<script src="../angular/services/vendasService.js"></script>
 	<script src="../angular/services/produtosService.js"></script>
 	<script src="../angular/services/loginService.js"></script>
-
+	<script src="../angular/services/clientesService.js"></script>
+	
+	
 	<script src="../angular/factory/vendasFactory.js"></script>
 	<script src="../angular/factory/produtosFactory.js"></script>
+	<script src="../angular/factory/clientesFactory.js "></script>
+
 
 	<script src="../angular/directives/confirm.directive.js"></script>
 

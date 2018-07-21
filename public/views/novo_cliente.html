@@ -1,0 +1,44 @@
+<section class="container-fluid" id="cadCliente">
+	<div>
+		<div class="row">
+			<div class="col-md-3">
+				<h1 class="titulos" align="center">Novo Cliente</h1>
+			</div>
+			<div class="col-md-6">
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+		<br>
+		<form>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="txtNome">Nome</label>
+						<input type="text" ng-model="cliente.nome" class="form-control" id="txtNome" aria-describedby="nomeHelp" placeholder="Nome do Cliente">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="txtEndereco">Endereço</label>
+						<input type="text" ng-model="cliente.endereco" class="form-control" id="txtEndereco" placeholder="Endereco">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="txtTelefones">Telefone</label>
+						<input type="text" maxlength="14" ng-model="cliente.telefones" class="form-control" id="txtTelefones" ui-br-phone-number-mask="areaCode">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-9">
+				</div>
+				<div class="col-md-3">
+					<div class="pull-right">
+						<button ng-click="limpar()" class="btn btn-default">Limpar</button>
+						<button ng-click="salvar()" class="btn btn-default">Salvar</button>
+					</div>
+				</div>
+			</div>
+		</form>
+</section>
