@@ -179,3 +179,7 @@ hr{
 	color: #77BACE;
 	border-color: #77BACE;
 }
+
+tr:hover{
+	background: #E6E6E6 !important;
+}

@@ -1,4 +1,4 @@
-myApp.controller("clientesCtrl", function ($scope, $http, clientesFactory, clientesService, $timeout) {
+myApp.controller("clientesCtrl", function ($scope, modalFactory, $http, clientesFactory, clientesService, $timeout) {
     var vm = $scope;
     vm.cliente = {};
     vm.cliente.telefones = [];
@@ -11,6 +11,10 @@ myApp.controller("clientesCtrl", function ($scope, $http, clientesFactory, clien
 
     vm.salvar = function () {
 
+    }
+
+    vm.detalharCliente = function (obj) {
+        modalFactory.open("modalDetalheCliente", "Detalhes do Cliente", true, obj);
     }
 
     vm.adicionarTelefone = function () {
@@ -41,4 +45,9 @@ myApp.controller("clientesCtrl", function ($scope, $http, clientesFactory, clien
 
     activate();
 
+    function abrirModal(id, titulo) {
+
+    }
+
 });
+

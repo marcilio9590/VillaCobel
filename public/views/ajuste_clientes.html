@@ -1,0 +1,41 @@
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-md-5">
+            <h1 class="titulos">Ajuste de Clientes</h1>
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <table class="table table-hover table-bordered" id="tblEstoque">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Detalhar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr dir-paginate="item in clientes | itemsPerPage: 5">
+                        <td ng-bind="item.nome"></td>
+                        <td ng-bind="item.endereco"></td>
+                        <td>
+                            <font>Ver Telefones</font>
+                            <i ng-click="detalharCliente(item)" class="fas fa-search-plus clickable"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true">
+                </dir-pagination-controls>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</section>

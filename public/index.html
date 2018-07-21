@@ -149,6 +149,8 @@
 	<section ng-view id="main" class="column">
 	</section>
 
+	<div ng-include="'views/modais/modal.html'"></div>
+
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../angular/angular.min.js"></script>
@@ -163,14 +165,14 @@
 	<script src="../angular/controllers/indexCtrl.js"></script>
 	<script src="../angular/controllers/clienteCtrl.js"></script>
 
-	
+	<script src="../angular/services/modalService.js"></script>
 	<script src="../angular/services/abstractService.js"></script>
 	<script src="../angular/services/vendasService.js"></script>
 	<script src="../angular/services/produtosService.js"></script>
 	<script src="../angular/services/loginService.js"></script>
 	<script src="../angular/services/clientesService.js"></script>
-	
-	
+
+
 	<script src="../angular/factory/vendasFactory.js"></script>
 	<script src="../angular/factory/produtosFactory.js"></script>
 	<script src="../angular/factory/clientesFactory.js "></script>
