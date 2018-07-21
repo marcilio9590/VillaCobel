@@ -167,3 +167,15 @@ hr{
 	flex-wrap: wrap;
 	justify-content: center;
 }
+.addTelefone{
+	float:right; 
+	margin-top: 5px; 
+	cursor:pointer;
+}
+.addTelefone:hover{
+	color: #77BACE;
+}
+.btn:hover{
+	color: #77BACE;
+	border-color: #77BACE;
+}

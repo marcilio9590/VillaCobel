@@ -12,6 +12,10 @@ myApp.controller("clientesCtrl", function ($scope, $http, clientesFactory, clien
 
     }
 
+    vm.adicionarTelefone = function(){
+        
+    }
+
     function obterClientes() {
         mock();
     }
