@@ -1,53 +1,41 @@
 // Factory
-myApp.factory('produtosFactory', function(){
-	
-	var Estoque = function(codigo, nome, preco, metro, quantidade) {
-		this.codigo =  codigo;
-		this.nome =  nome;
-		this.preco =  preco;
-		this.metro =  metro;
-		this.quantidade =  quantidade;
+myApp.factory('produtosFactory', function () {
+
+	var Produto = function (nome, custo, precoCliente, quantidade, id) {
+		this.nome = nome;
+		this.custo = custo;
+		this.precoCliente = precoCliente;
+		this.quantidade = quantidade;
 	};
 
-	var EstoqueBack = function(nome, preco, metro, quantidade) {
-		this.nome =  nome;
-		this.preco =  preco;
-		this.metro =  metro;
-		this.quantidade =  quantidade;
-	};
-
-	function convertEstoqueToFront(estoque){
-		var listEstoque = [];
-		for (var i = 0; i < estoque.length; i++) {
-			listEstoque.push(
-				new Estoque(
-					estoque[i].id,
-					estoque[i].nome,
-					estoque[i].preco,
-					estoque[i].metro,
-					estoque[i].quantidade
-					));
+	function convertToFront(produtos) {
+		var saida = [];
+		for (var i = 0; i < produtos.length; i++) {
+			saida.push(
+				new Produto(
+					produtos[i].nome,
+					produtos[i].custo,
+					produtos[i].precoCliente,
+					produtos[i].quantidade,
+					produtos[i].id
+				));
 		}
-		return listEstoque;
+		return saida;
 	}
 
-	function convertEstoqueToBack(estoque){
-		var listEstoqueBack = [];
-		listEstoqueBack.push(
-			new EstoqueBack(
-				estoque.nome,
-				estoque.preco,
-				estoque.metro,
-				estoque.quantidade
-				));
-		return listEstoqueBack;
+	function convertToBack(produto) {
+		return new Produto(
+			produto.nome,
+			produto.custo,
+			produto.precoCliente,
+			produto.quantidade);
 	}
 
 
 
 	var exports = {
-		convertEstoqueToFront:convertEstoqueToFront,
-		convertEstoqueToBack:convertEstoqueToBack
+		convertToFront: convertToFront,
+		convertToBack: convertToBack
 	};
 
 	return exports;
