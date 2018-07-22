@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="/node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"
 	/>
 
+
 	<script src="dashboard/js/jquery-1.5.2.min.js" type="text/javascript"></script>
 	<script src="dashboard/js/hideshow.js" type="text/javascript"></script>
 	<script src="dashboard/js/jquery.tablesorter.min.js" type="text/javascript"></script>
@@ -147,14 +148,14 @@
 	<section ng-view id="main" class="column">
 	</section>
 
-	<div ng-include="'views/modais/modal.html'"></div>
+	<div ng-include="'views/modais/modal_detalhe_cliente.html'"></div>
 
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../angular/angular.min.js"></script>
 	<script src="../angular/rotas.js"></script>
 	<script src="../angular/paginacao/dirPagination.js"></script>
-	<script src="node_modules/angular-input-masks/releases/angular-input-masks-standalone.min.js"></script>
+	<script src="/node_modules/angular-input-masks/releases/angular-input-masks-standalone.min.js"></script>
 	<script src="/node_modules/moment/min/moment.min.js"></script>
 	<script src="/node_modules/moment/min/moment-with-locales.min.js"></script>
 	<script src="/node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
@@ -180,6 +181,7 @@
 
 
 	<script src="../angular/directives/confirm.directive.js"></script>
+	<script src="../angular/directives/autocomplete.directive.js"></script>
 
 </body>
 

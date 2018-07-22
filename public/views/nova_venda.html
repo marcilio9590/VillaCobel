@@ -16,7 +16,11 @@
 			<div class="col-md-3">
 				<div class="form-group">
 					<label for="txtpesquisaProduto">Pesquisar Produtos</label>
-					<input type="text" ng-model="pesquisaProduto" class="form-control" id="txtpesquisaProduto" aria-describedby="nomeHelp" placeholder="Nome do produto">
+					<input complete="{{autocompleteOptions}}" type="text" ng-model="pesquisaProduto" class="form-control" id="txtpesquisaProduto"
+					 aria-describedby="nomeHelp" placeholder="Nome do produto">
+					<!-- <ul class="list-group">
+						<li class="list-group-item" ng-repeat="item in filtroProdutos">{{item.nome}}</li>
+					</ul> ng-keyup="complete(pesquisaProduto)"-->
 				</div>
 			</div>
 			<div class="col-md-3">
@@ -27,7 +31,7 @@
 			</div>
 			<div class="col-md-3">
 				<div class="form-group">
-					<label for="txtNome">Data de recebimento</label>
+					<label for="txtNome">Data para recebimento</label>
 					<div class='input-group date' id='dataRecebimento'>
 						<input type='text' class="form-control" />
 						<span ng-model="venda.dataRecebimento" ng-click="openDatePicker()" class="input-group-addon">

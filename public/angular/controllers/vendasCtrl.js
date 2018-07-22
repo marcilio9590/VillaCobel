@@ -1,5 +1,9 @@
 myApp.controller("vendasCtrl", function ($scope, $http, $timeout, vendasFactory) {
 	var vm = $scope;
+	vm.autocompleteOptions =
+		{
+			url: "/vendas/buscarProdutos"
+		};
 
 	// vm.listarEstoque = function(){
 	// 	$http({
@@ -30,6 +34,7 @@ myApp.controller("vendasCtrl", function ($scope, $http, $timeout, vendasFactory)
 	// 	vm.flag = false;
 	// }
 
+	vm.filtroProdutos = [];
 	vm.venda = {};
 
 	var optionsDatePicker = {
@@ -49,6 +54,20 @@ myApp.controller("vendasCtrl", function ($scope, $http, $timeout, vendasFactory)
 
 	vm.openDatePicker = function () {
 		$('#dataRecebimento').datetimepicker(optionsDatePicker)
+	}
+
+	vm.complete = function (string) {
+		if (string.length > 0) {
+			var output = [];
+			angular.forEach(vm.itemsEstoque, function (item) {
+				if (item.nome.toLowerCase().indexOf(string.toLowerCase()) >= 0) {
+					output.push(item);
+				}
+			});
+			vm.filtroProdutos = output;
+		} else {
+			vm.filtroProdutos = [];
+		}
 	}
 
 	function activate() {
