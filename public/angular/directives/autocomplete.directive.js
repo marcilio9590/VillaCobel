@@ -1,4 +1,4 @@
-myApp.directive('complete', function ($http) {
+myApp.directive('complete', function ($http, $compile) {
     return function (scope, elm, attrs) {
         var ul;
         ul = angular.element("<ul class='list-group'></ul>");
@@ -15,8 +15,10 @@ myApp.directive('complete', function ($http) {
                     limparConteudo(ul);
                     for (var i = 0; i < response.data.length; i++) {
                         var obj = response.data[i];
-                        var li = angular.element("<li class='list-group-item clickable'>" + obj.nome + "</li>");
+                        var li = angular.element("<li ng-click='" + data.functionName + "(" + JSON.stringify(obj) + ")' class='list-group-item clickable'>" + obj.nome + "</li>");
                         ul.append(li);
+                        $compile(ul.contents())(scope);
+
                     }
                     if (ul.length > 0) {
                         event.target.parentNode.append(ul[0]);

@@ -16,11 +16,16 @@
 			<div class="col-md-3">
 				<div class="form-group">
 					<label for="txtpesquisaProduto">Pesquisar Produtos</label>
-					<input complete="{{autocompleteOptions}}" type="text" ng-model="pesquisaProduto" class="form-control" id="txtpesquisaProduto"
+					<input complete="{{autoCompleteOptions}}" type="text" ng-model="pesquisaProduto" class="form-control" id="txtpesquisaProduto"
 					 aria-describedby="nomeHelp" placeholder="Nome do produto">
 					<!-- <ul class="list-group">
 						<li class="list-group-item" ng-repeat="item in filtroProdutos">{{item.nome}}</li>
 					</ul> ng-keyup="complete(pesquisaProduto)"-->
+				</div>
+				<div>
+					<ul class="list-group">
+						<li class="list-group-item" ng-repeat="item in produtosSelecionados">{{item.nome}}</li>
+					</ul>
 				</div>
 			</div>
 			<div class="col-md-3">

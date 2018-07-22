@@ -87,25 +87,41 @@ app.get('/logout', function (req, res) {
 // 		});
 // });
 
+var itemsEstoque = [];
+itemsEstoque.push({ idProduto: 1, nome: "Bem basiquinha", quantidade: 2 });
+itemsEstoque.push({ idProduto: 2, nome: "Mulherão da porra", quantidade: 2 });
+itemsEstoque.push({ idProduto: 3, nome: "Potinho", quantidade: 2 });
 
-// app.post('/estoque/salvarItem', function (req, res) {
-// 	var obj = req.body
-// 	if (obj.nome != 'undefined' && obj.preco != 'undefined') {
-// 		if (obj.metro == null) {
-// 			// obj.metro = 0;
-// 		}
-// 		if (obj.quantidade == "" || obj.quantidade == null) {
-// 			// obj.quantidade = 0;
-// 		}
-// 		var salvarItem = "INSERT INTO estoque(nome, preco, metro, quantidade) VALUES ($1, $2, $3, $4)";
-// 		pool.query(salvarItem, [obj.nome, obj.preco, obj.metro, obj.quantidade]) // find the user from id;
-// 			.then(function (data) {
-// 				res.send(data.rows);
-// 			}).catch(function (err) {
-// 				console.log(err);
-// 			})
-// 	}
-// });
+app.post('/vendas/buscarProdutos', function (req, res) {
+	var obj = req.body;
+	var filtroProdutos = [];
+	if (obj) {
+		var output = [];
+		for (let i = 0; i < itemsEstoque.length; i++) {
+			var item = itemsEstoque[i];
+			if (item.nome.toLowerCase().indexOf(obj.value.toLowerCase()) >= 0) {
+				output.push(item);
+			}
+		};
+		filtroProdutos = output;
+	}
+	res.send(filtroProdutos);
+	// if (obj.nome != 'undefined' && obj.preco != 'undefined') {
+	// 	if (obj.metro == null) {
+	// 		// obj.metro = 0;
+	// 	}
+	// 	if (obj.quantidade == "" || obj.quantidade == null) {
+	// 		// obj.quantidade = 0;
+	// 	}
+	// 	var salvarItem = "INSERT INTO estoque(nome, preco, metro, quantidade) VALUES ($1, $2, $3, $4)";
+	// 	pool.query(salvarItem, [obj.nome, obj.preco, obj.metro, obj.quantidade]) // find the user from id;
+	// 		.then(function (data) {
+	// 			res.send(data.rows);
+	// 		}).catch(function (err) {
+	// 			console.log(err);
+	// 		})
+	// }
+});
 
 // app.put('/estoque/editarItem/:id', function (req, res) {
 // 	var obj = req.body;

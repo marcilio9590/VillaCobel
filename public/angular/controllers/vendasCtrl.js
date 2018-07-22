@@ -1,9 +1,11 @@
-myApp.controller("vendasCtrl", function ($scope, $http, $timeout, vendasFactory) {
+myApp.controller("vendasCtrl", function ($scope, vendasFactory) {
 	var vm = $scope;
-	vm.autocompleteOptions =
+	vm.autoCompleteOptions =
 		{
-			url: "/vendas/buscarProdutos"
+			url: "/vendas/buscarProdutos",
+			functionName: "onSelectProduto"
 		};
+	vm.produtosSelecionados = [];
 
 	// vm.listarEstoque = function(){
 	// 	$http({
@@ -33,6 +35,10 @@ myApp.controller("vendasCtrl", function ($scope, $http, $timeout, vendasFactory)
 	// 	vm.produto = {};
 	// 	vm.flag = false;
 	// }
+
+	vm.onSelectProduto = function (obj) {
+		vm.produtosSelecionados.push(obj);
+	}
 
 	vm.filtroProdutos = [];
 	vm.venda = {};
