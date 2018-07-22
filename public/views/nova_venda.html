@@ -8,5 +8,43 @@
 		<div class="col-xs-3"></div>
 	</div>
 
+	<br>
+
+	<form id="formNovaVenda" name="formNovaVenda">
+
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="txtpesquisaProduto">Pesquisar Produtos</label>
+					<input type="text" ng-model="pesquisaProduto" class="form-control" id="txtpesquisaProduto" aria-describedby="nomeHelp" placeholder="Nome do produto">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="txtPesquisaCliente">Pesquisar Cliente</label>
+					<input type="text" ng-model="pesquisaCliente" class="form-control" id="txtPesquisaCliente" aria-describedby="nomeHelp" placeholder="Nome do cliente">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="txtNome">Data de recebimento</label>
+					<div class='input-group date' id='dataRecebimento'>
+						<input type='text' class="form-control" />
+						<span ng-model="venda.dataRecebimento" ng-click="openDatePicker()" class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="desconto">Desconto</label>
+					<input ng-model="venda.desconto" type="number" step="0.01" class="form-control" id="desconto" placeholder="Desconto">
+				</div>
+			</div>
+		</div>
+
+	</form>
+
 
 </section>

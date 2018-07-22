@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular-input-masks": "^4.2.1"
+    "angular-input-masks": "^4.2.1",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "moment": "^2.22.2"
   }
 }

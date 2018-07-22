@@ -1,4 +1,4 @@
-myApp.controller("vendasCtrl", function($scope,$http,$timeout,vendasFactory){
+myApp.controller("vendasCtrl", function ($scope, $http, $timeout, vendasFactory) {
 	var vm = $scope;
 
 	// vm.listarEstoque = function(){
@@ -30,20 +30,31 @@ myApp.controller("vendasCtrl", function($scope,$http,$timeout,vendasFactory){
 	// 	vm.flag = false;
 	// }
 
-	function openModal(){
+	vm.venda = {};
+
+	var optionsDatePicker = {
+		format: "DD/MM/YYYY",
+		locale: "pt-br"
+	};
+
+	function openModal() {
 		angular.element('#myModal').modal('show');
 	}
 
-	vm.closeModal = function(){
+	vm.closeModal = function () {
 		angular.element('#myModal').modal('hide');
 		vm.produto = {};
 		vm.flag = false;
 	}
 
-	function activate(){
+	vm.openDatePicker = function () {
+		$('#dataRecebimento').datetimepicker(optionsDatePicker)
+	}
+
+	function activate() {
 
 	}
 
 	activate();
-	
+
 });
